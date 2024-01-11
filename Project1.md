@@ -18,7 +18,7 @@ Computing arithmetic intensity for given compute kernels.
   Y[i] = A[i] + C*B[i]
 ```
 
-|   | Operations | Load | Write | Arithmetic intensities |
+|kernels| Operations | Load | Write | Arithmetic intensities |
 |:-:|:----------:|:----:|:-----:|:----------------------:|
 | Y[j] += Y[j] + A[j][i] * B[i] |      3     |   3  |   1   |     3/(4*8) = 3/32     |
 | s += A[i] * A[i] |      2     |   1  |   0   |      2/(1*8) = 1/4     |
