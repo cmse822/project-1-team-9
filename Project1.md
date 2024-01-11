@@ -1,4 +1,20 @@
-1. 
+## Warm-up
+
+```C
+  Y[j] += Y[j] + A[j][i] * B[i]
+```
+
+```C
+  s += A[i] * A[i]
+```
+
+```C
+  s += A[i] * B[i]
+```
+
+```C
+  Y[i] = A[i] + C*B[i]
+```
 
 |   | Operations | Load | Write | Arithmetic intensities |
 |:-:|:----------:|:----:|:-----:|:----------------------:|
