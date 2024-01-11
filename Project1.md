@@ -1,5 +1,7 @@
 ## Warm-up
 
+Computing arithmetic intensity for given compute kernels. 
+
 ```C
   Y[j] += Y[j] + A[j][i] * B[i]
 ```
