@@ -17,7 +17,7 @@ int main(void){
     float mat2[N][N];
     random_device rd;
     mt19937_64 prng(rd() );
-    uniform_int_distribution<float> dist(0,256);
+    uniform_int_distribution<int> dist(0,256);
     for (int i = 0; i<N; i++){
         for (int j=0;j<N;j++){
             mat1[i][j] =prng()/256-0.5;
