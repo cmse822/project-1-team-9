@@ -1,0 +1,23 @@
+#!/bin/bash --login
+#SBATCH --nodes=2
+#SBATCH --ntasks-per-node=1
+#SBATCH --time=01:00:00
+#SBATCH --mem=5gb
+
+
+# Specify the directory containing your ".out" files
+directory_path="/mnt/home/liangqi1/Documents/CMSE_822/project-1-team-9"
+
+# Change to the specified directory
+cd "$directory_path" || exit
+
+# Iterate over each ".out" file in the directory
+for file in *.out; do
+    if [ -f "$file" ]; then
+        echo "Running $file..."
+        ./"$file"
+        echo "----------------------------------------"
+    fi
+done
+
+

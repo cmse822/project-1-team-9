@@ -25,7 +25,7 @@ vector<vector<float>> matrixMultiply(const vector<vector<float>>& A, const vecto
 }
 
 int main() {
-    const int N = 30; // Matrix size
+    const int N = 40; // Matrix size
 
     // Initialize matrices A and B (random values for simplicity)
     vector<vector<float>> A(N, vector<float>(N, 1.0));

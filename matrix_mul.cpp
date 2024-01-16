@@ -4,7 +4,7 @@ using namespace std;
 #include <sys/time.h>
 int main()
 {
-    const long int r1 =40;
+    const long int r1 =10000;
     const int c1 = r1;
     const int r2 = c1;
     const int c2 = r2;
