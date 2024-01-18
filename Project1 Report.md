@@ -44,7 +44,13 @@ In the innermost line of the loops, there are two floating point operations. Thi
  times. Therefore, the total number of flop is $2N^3$
 .
 
-### 3. 
+### 3.
+
+For Amd20 in the HPCC the performance is 203.927 Mflops/s. 
+
+
+
+### 4. 
 
 One node on HPCC have been selected for this project. The specifications of this one CPU can be found in the following table:
 | CPU                             | clock speed | L1 cache size | L2 cache size | L3 cache size | Number of cores per socket |
