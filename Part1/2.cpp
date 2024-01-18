@@ -26,7 +26,7 @@ int main(void) {
 
     float rslt[N][N];
     auto start_time = std::chrono::high_resolution_clock::now();
-    for (int iter = 0; iter < NUM_REPEATS; iter++) {
+    for (int iter = 0; iter < 10000; iter++) {
         for (int i = 0; i < N; i++) {
             for (int j = 0; j < N; j++) {
                 rslt[i][j] = 0;
@@ -42,7 +42,7 @@ int main(void) {
     std::chrono::duration<double> elapsed_seconds = end_time - start_time;
 
     // Calculate total FLOPs and Mflop/s
-    double total_flops = 2.0 * N * N * N * NUM_REPEATS; // Assuming each multiplication and addition is a FLOP
+    double total_flops = 2.0 * N * N * N * 10000; // Assuming each multiplication and addition is a FLOP
     double mflops_per_second = total_flops / (elapsed_seconds.count() * 1e6);
 
     cout << "Total Execution Time: " << elapsed_seconds.count() << " seconds" << endl;
