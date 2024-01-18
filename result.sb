@@ -2,6 +2,7 @@
 
 #SBATCH --nodes=1
 #SBATCH --ntasks-per-node=1
+#SBATCH --nodelist=amr-[000-101]
 #SBATCH --time=00:30:00
 #SBATCH --mem=2gb
 #SBATCH --job-name matrix_multi_matrix
@@ -13,7 +14,7 @@ directory_path="/mnt/home/liangqi1/Documents/CMSE_822/project-1-team-9"
 cd "$directory_path" || exit
 
 # Iterate over matrix sizes from 1 to 10000 with a step size of 10
-for ((size=100; size<=1000; size+=100)); do
+for ((size=10; size<=100; size+=10)); do
     file="matrix_multiply"
 
     # Check if the file is executable
