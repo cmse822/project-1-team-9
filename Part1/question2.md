@@ -5,4 +5,4 @@
 $flops=N^2\times (N + N-1)$
 ## Simplifying the expression:
 $flops=N^3$
-## So, the total number of floating-point operations is $N^3$ for a given matrix size $N$
+## So, the total number of floating-point operations is $N^3$ for a given matrix size $N$.
