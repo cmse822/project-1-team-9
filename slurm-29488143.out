@@ -1,0 +1,70 @@
+Running matrix_multiply with matrix size 100...
+Results appended to results.csv
+
+real	0m0.325s
+user	0m0.312s
+sys	0m0.005s
+----------------------------------------
+Running matrix_multiply with matrix size 200...
+Results appended to results.csv
+
+real	0m2.516s
+user	0m2.511s
+sys	0m0.000s
+----------------------------------------
+Running matrix_multiply with matrix size 300...
+Results appended to results.csv
+
+real	0m8.603s
+user	0m8.585s
+sys	0m0.011s
+----------------------------------------
+Running matrix_multiply with matrix size 400...
+Results appended to results.csv
+
+real	0m21.032s
+user	0m21.004s
+sys	0m0.017s
+----------------------------------------
+Running matrix_multiply with matrix size 500...
+Results appended to results.csv
+
+real	0m41.074s
+user	0m41.041s
+sys	0m0.018s
+----------------------------------------
+Running matrix_multiply with matrix size 600...
+Results appended to results.csv
+
+real	1m8.660s
+user	1m8.609s
+sys	0m0.010s
+----------------------------------------
+Running matrix_multiply with matrix size 700...
+Results appended to results.csv
+
+real	1m58.552s
+user	1m58.490s
+sys	0m0.023s
+----------------------------------------
+Running matrix_multiply with matrix size 800...
+Results appended to results.csv
+
+real	2m57.749s
+user	2m57.649s
+sys	0m0.045s
+----------------------------------------
+Running matrix_multiply with matrix size 900...
+Results appended to results.csv
+
+real	4m18.583s
+user	4m18.481s
+sys	0m0.049s
+----------------------------------------
+Running matrix_multiply with matrix size 1000...
+Results appended to results.csv
+
+real	6m49.866s
+user	6m49.696s
+sys	0m0.088s
+----------------------------------------
