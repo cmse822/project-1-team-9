@@ -44,3 +44,10 @@ In the innermost line of the loops, there are two floating point operations. Thi
  times. Therefore, the total number of flop is $2N^3$
 .
 
+### 3. 
+
+One node on HPCC have been selected for this project. The specifications of this one CPU can be found in the following table:
+| CPU                             | clock speed | L1 cache size | L2 cache size | L3 cache size | Number of cores per socket |
+|:-------------------------------:|:-----------:|:-------------:|:-------------:|:-------------:|:--------------------------:|
+| AMD EPYC 7H12 64-Core Processor | $2.6$ GHz  | $32$ KB       | $512$ KB      | $16$ MB       | 64                         |
+
