@@ -1,4 +1,5 @@
 #include <iostream>
+#include <fstream>  
 #include <vector>
 #include <random>
 #include "get_walltime.c"
@@ -74,10 +75,22 @@ int main(int argc, char* argv[]) {
     double total_ops = 2.0 * N * N * N; // Total ops for all iterations
     double gflops = (total_ops / average_elapsed_time) * 1e-9;
 
-    // Output results
-    cout << "Matrix Size (N): " << N << endl;
-    cout << "Average Time per Iteration: " << average_elapsed_time << " seconds." << endl;
-    cout << "Average Performance: " << gflops << " Gflop/s" << endl;
+
+    // Output results to a CSV file with header
+    ofstream outFile("results.csv", ios::app);  // Open file in append mode
+    if (outFile.is_open()) {
+        // Add header if the file is empty
+        if (outFile.tellp() == 0) {
+            outFile << "N,average_elapsed_time,gflops" << endl;
+        }
+        outFile << N << "," << average_elapsed_time << "," << gflops << endl;
+        outFile.close();
+        cout << "Results appended to results.csv" << endl;
+    } else {
+        cerr << "Unable to open the output file." << endl;
+        return 1;
+    }
+
 
     return 0;
 }
