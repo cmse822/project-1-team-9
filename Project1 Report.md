@@ -46,7 +46,7 @@ In the innermost line of the loops, there are two floating point operations. Thi
 
 ### 3.
 
-For Amd20 in the HPCC the performance is 203.927 Mflops/s. 
+For Amd20 in the HPCC the performance is 2147.18 Mflops/s. 
 
 
 
