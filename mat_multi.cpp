@@ -49,7 +49,7 @@ int main(int argc, char* argv[]) {
     }
 
     const int N = atoi(argv[1]); // Matrix size
-    const int num_iterations = 20; // Number of iterations
+    const int num_iterations = 5; // Number of iterations
 
     // Initialize matrices A and B with random values between 1 and 10
     vector<vector<float>> A = initializeRandomMatrix(N, N);
