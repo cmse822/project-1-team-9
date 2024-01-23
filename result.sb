@@ -8,7 +8,7 @@
 #SBATCH --job-name matrix_multi_matrix
 
 # Specify the directory containing your executable files
-directory_path="/mnt/home/liangqi1/Documents/CMSE_822/project-1-team-9"
+directory_path="/mnt/home/daihaish/CMSE822-Dai/project-1-team-9"
 
 # Change to the specified directory
 cd "$directory_path" || exit
