@@ -71,6 +71,13 @@ One node on HPCC have been selected for this project. The specifications of this
 | Intel(R) Xeon(R) Gold 6148 40-Core Processor    | $2.4$ GHz  | $32$ KB       | $1024$ KB      | $28$ MB       | 40     |
 | AMD Ryzen 7 3750H 4-Core Processor | $2.30$ GHz  | $348$ KB       | $2$ MB      | $4$ MB       | 4                         |
 
+To calculate the Peak Performance, we have:
+$$\text{Theoretical peak performance (FLOPS)} = \text{Clock speed (GHz)} \times \text{Number of cores} \times \text{Number of FLOPS per clock cycle}$$
+
+By assuming that the processor is capable of one flop per clock cycle, the theoretical peak performance for each core is equal to its clock speed.
+
+For $N=100$, the performance is lower than the theoretical peak performance, which means that the process is memory-bounded.
+
 
 ### 5. 
 Results gathered from running code on the CPUs are presented in the following figures and compared to the theoretical peak performance.
@@ -86,8 +93,9 @@ In the final figure, the performance of CPUs is compared to each other collectiv
 ![alt text](./Visualization/compare.png)
 
 ### 6. 
-Based on the figures, the performance in Gflop/s increases from N=1 to N=10 and remains approximately stable within the range of N=10 to 1000, representing the peak performance. However, beyond N=1000, there will be a decline in performance.
+Based on the figures, the performance in Gflop/s increases from N=1 to N=10 and remains approximately stable within the range of N=10 to 1000, representing the peak performance. However, beyond N=1000, there will be a decline in performance. The CPU computing speed tends to decline, indicating that the cache capacity is insufficient and the data needs to be called from the main memory.
 
+NOTE: Two CPUs in N more than 4000 after the processor rate back up may be due to the processor overflowed resulting in inaccurate results.
 
 ## part 2
 
