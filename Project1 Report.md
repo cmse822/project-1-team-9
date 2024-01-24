@@ -97,7 +97,11 @@ Based on the figures, the performance in Gflop/s increases from N=1 to N=10 and 
 
 NOTE: Two CPUs in N more than 4000 after the processor rate back up may be due to the processor overflowed resulting in inaccurate results.
 
+
 ## part 2
+
+The generated roofline figures for the two CPUs, IntelXeon and AMD, have shown below.
+
 
 ### 1. 
 
