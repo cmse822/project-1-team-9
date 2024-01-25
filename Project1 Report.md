@@ -47,13 +47,18 @@ In the innermost line of the loops, there are two floating point operations. Thi
 ### 3.
 
 For Amd20 in the HPCC the performance is 203.927 Mflops/s. 
+For Intel18 on HPCC the performance is 189.122 Mflops/s
 
 
 
 ### 4. 
 
-One node on HPCC have been selected for this project. The specifications of this one CPU can be found in the following table:
+The nodes on HPCC we have selected for this project. The specifications of these CPUs can be found in the following table:
 | CPU                             | clock speed | L1 cache size | L2 cache size | L3 cache size | Number of cores per socket |
 |:-------------------------------:|:-----------:|:-------------:|:-------------:|:-------------:|:--------------------------:|
 | AMD EPYC 7H12 64-Core Processor | $2.6$ GHz  | $32$ KB       | $512$ KB      | $16$ MB       | 64                         |
+| Intel® Xeon® Gold 6148 Processor| $2.4$ GHz  | $32$ KB       | $1024$ KB     | $27.5$ MB     | 20                         |
+
+
+
 
