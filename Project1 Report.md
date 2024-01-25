@@ -41,7 +41,7 @@ for (int i = 0; i < r1; i++) {
 
 ### 2. 
 In the innermost line of the loops, there are two floating point operations. This line is executed $N^3$
- times. Therefore, the total number of flop is $2N^3$
+ times. Therefore, the total number of flop is $2N^3-N^2$
 .
 
 ### 3.
@@ -68,11 +68,11 @@ One node on HPCC have been selected for this project. The specifications of this
 | CPU                             | clock speed | L1 cache size | L2 cache size | L3 cache size | Number of cores per socket |
 |:-------------------------------:|:-----------:|:-------------:|:-------------:|:-------------:|:--------------------------:|
 | AMD EPYC 7H12 64-Core Processor    | $2.6$ GHz   | $32$ KB       | $512$ KB      | $16$ MB       | 64                         |
-| Intel(R) Xeon(R) Gold 6148 40-Core Processor    | $2.4$ GHz  | $32$ KB       | $1024$ KB      | $28$ MB       | 40     |
+| Intel(R) Xeon(R) Gold 6148 20-Core Processor    | $2.4$ GHz  | $32$ KB       | $1024$ KB      | $27.5$ MB       | 20     |
 | AMD Ryzen 7 3750H 4-Core Processor | $2.30$ GHz  | $348$ KB       | $2$ MB      | $4$ MB       | 4                         |
 
 To calculate the Peak Performance, we have:
-$$\text{Theoretical peak performance (FLOPS)} = \text{Clock speed (GHz)} \times \text{Number of cores} \times \text{Number of FLOPS per clock cycle}$$
+$$\text{Theoretical peak performance (GFLOPS)} = \text{Clock speed (GHz)} \times \text{Number of FLOPS per clock cycle}$$
 
 By assuming that the processor is capable of one flop per clock cycle, the theoretical peak performance for each core is equal to its clock speed.
 
@@ -93,7 +93,7 @@ In the final figure, the performance of CPUs is compared to each other collectiv
 ![alt text](./Visualization/compare.png)
 
 ### 6. 
-Based on the figures, the performance in Gflop/s increases from N=1 to N=10 and remains approximately stable within the range of N=10 to 1000, representing the peak performance. However, beyond N=1000, there will be a decline in performance. The CPU computing speed tends to decline, indicating that the cache capacity is insufficient and the data needs to be called from the main memory.
+Based on the figures, the performance in Gflop/s increases from N=1 to N=10 and remains approximately stable within the range of N=10 to 1000, representing the peak performance. However, beyond N=1000 we expect the sizes of the matricies to start to overflow the cache memory therfore resulting in cache misses, significantly decreasing performance and therfore the CPU computing speed tends to decline.
 
 NOTE: Two CPUs in N more than 4000 after the processor rate back up may be due to the processor overflowed resulting in inaccurate results.
 
@@ -102,13 +102,17 @@ NOTE: Two CPUs in N more than 4000 after the processor rate back up may be due t
 
 The generated roofline figures for the two CPUs, IntelXeon and AMD, have shown below.
 
+<<<<<<< HEAD
 
 ### 1. 
 
 ### 2. 
+=======
+### 3.
+We observed the ridge point to be at 0.24 FLOPS/Byte for L1 cache, 0.35 FLOPS/byte for L2 cache and 0.55 FLOPS/byte for DRAM
+>>>>>>> 31377da79f78466025351803f26b16f385d7e026
 
 
-### 3. 
 ![alt text](./Visualization/roofline_intel18.png)
 
 ### 4. 
