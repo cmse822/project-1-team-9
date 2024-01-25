@@ -115,6 +115,9 @@ For amd20, We observed the ridge point to be at 0.18 FLOPS/Byte for L1 cache, 0.
 
 ### 4. 
 
+#### intel18
+![alt text](./Visualization/roofline_intel18_4Kernels.png)
+
 #### amd20
 ![alt text](./Visualization/amd20_roofline_3_4kernels.png)
 
@@ -124,5 +127,8 @@ For amd20, We observed the ridge point to be at 0.18 FLOPS/Byte for L1 cache, 0.
 
 #### amd20
 ![alt text](./Visualization/amd20_roofline_warmup.png)
+
+#### intel18
+![alt text](./Visualization/roofline_intel18_Warmups.png)
 
 ### 6. 
