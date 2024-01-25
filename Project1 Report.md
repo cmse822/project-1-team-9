@@ -106,7 +106,6 @@ The generated roofline figures for the two CPUs, IntelXeon and AMD, have shown b
 ### 1. 
 
 ### 2. 
-Config 
 
 
 ### 3. 
