@@ -102,19 +102,27 @@ NOTE: Two CPUs in N more than 4000 after the processor rate back up may be due t
 
 The generated roofline figures for the two CPUs, IntelXeon and AMD, have shown below.
 
-<<<<<<< HEAD
 
-### 1. 
-
-### 2. 
 =======
 ### 3.
-We observed the ridge point to be at 0.24 FLOPS/Byte for L1 cache, 0.35 FLOPS/byte for L2 cache and 0.55 FLOPS/byte for DRAM
->>>>>>> 31377da79f78466025351803f26b16f385d7e026
-
+For intel18, We observed the ridge point to be at 0.24 FLOPS/Byte for L1 cache, 0.35 FLOPS/byte for L2 cache and 0.55 FLOPS/byte for DRAM
 
 ![alt text](./Visualization/roofline_intel18.png)
 
+
+For amd20, We observed the ridge point to be at 0.18 FLOPS/Byte for L1 cache, 0.24 FLOPS/byte for L2 cache and 0.65 FLOPS/byte for DRAM
+![amd20](./Visualization/amd20_roofline_3-1.png)
+
 ### 4. 
+
+#### amd20
+![alt text](./Visualization/amd20_roofline_3_4kernels.png)
+
+
+
 ### 5. 
+
+#### amd20
+![alt text](./Visualization/amd20_roofline_warmup.png)
+
 ### 6. 
