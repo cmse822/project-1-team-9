@@ -124,7 +124,7 @@ For amd20, We observed the ridge point to be at 0.18 FLOPS/Byte for L1 cache, 0.
 Both architectures are similar enough for these kernels that the analysis and optimization applies to both amd and intel in this case.
 
 The LBMHB and FFT kernels are compute bound so that no matter how large they get they will execute at peak FLOPS/s.
-The SPMV and Stencil kernels on the other hand would be memory bound and would experience slowdowns if their problem size exceeded the size of cache.
+The SPMV and Stencil kernels on the other hand would be memory bound and would experience slowdowns if their problem size spilled from cache into DRAM.
 
 To optimize the LBMHD and FFT kernels we suggest vectorization or compiler optimizations. For the SPMV and Stencil kernels we suggest using a more optimal data layout as to decrease the amount of cache misses incurred.
 
@@ -137,5 +137,12 @@ To optimize the LBMHD and FFT kernels we suggest vectorization or compiler optim
 
 #### intel18
 ![alt text](./Visualization/roofline_intel18_Warmups.png)
+
+Again both architectures are similar enough for these kernels that they all behave the same on either architecture.
+
+The only difference is kernel 2 on intel is memory bound only by DRAM whereas kernel 2 on amd is memory bound once it spills into L2 cache.
+Kernel 1,3,4 are all memory bound for any problem size on both architectures.
+
+The same optimizations from above apply to these kernels so for kernel 2 we would suggest vectorization and compiler optimizations when the problem size is small. For all other cases and kernels we suggest optimizing the data layout of the codes to use the memory hierachy efficiently.
 
 ### 6. 
