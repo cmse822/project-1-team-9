@@ -121,6 +121,11 @@ For amd20, We observed the ridge point to be at 0.18 FLOPS/Byte for L1 cache, 0.
 #### amd20
 ![alt text](./Visualization/amd20_roofline_3_4kernels.png)
 
+On intel the LBMHB and FFT kernels are compute bound so that no matter how large they get they will execute at peak FLOPS/s.
+The SPMV and Stencil kernels on the other hand would be memory bound and would experience slowdowns if their problem size exceeded the size of cache.
+
+To optimize the LBMHD and FFT kernels we suggest vectorization or compiler optimizations. For the SPMV and Stencil kernels we suggest using a more optimal data layout as to decrease the amount of cache misses incurred.
+
 
 
 ### 5. 
