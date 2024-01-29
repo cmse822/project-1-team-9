@@ -146,3 +146,5 @@ Kernel 1,3,4 are all memory bound for any problem size on both architectures.
 The same optimizations from above apply to these kernels so for kernel 2 we would suggest vectorization and compiler optimizations when the problem size is small. For all other cases and kernels we suggest optimizing the data layout of the codes to use the memory hierachy efficiently.
 
 ### 6. 
+
+The plot we generated from the matrix-matrix multiplication times and sizes matches what we foudn through the roofline model. We know this because we can see plateu in our graph that implies the problem is compute bound for those matrix sizes and after a point we see a decrease in speed when the probem size overflows into a larger cache and becomes memory bound.
